@@ -280,6 +280,13 @@ uv run python scripts/mass_match.py --mode stockfish --games 100000
 
 # Đấu cả hai (100k Self-Play + 100k Stockfish = 200,000 ván):
 uv run python scripts/mass_match.py --mode all --games 100000
+
+# 7. Đánh cờ tương tác với Bot qua Giao diện Đồ họa Raylib GUI
+uv run python -m chess_ai.gui
+# hoặc:
+uv run python scripts/play_gui.py
+# hoặc:
+uv run python -m chess_ai.main play
 ```
 
 ---

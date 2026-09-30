@@ -634,6 +634,12 @@ def build_parser() -> argparse.ArgumentParser:
     p_eval.add_argument("--checkpoint", type=str, default=None, help="Path to checkpoint directory or file (auto-discovers latest if omitted)")
     p_eval.add_argument("--device", type=str, default="auto", help="Compute device")
 
+    # 5. play (Raylib GUI)
+    p_play = subparsers.add_parser("play", help="Launch interactive Raylib GUI to play against the bot")
+    p_play.add_argument("--checkpoint", type=str, default=None, help="Path to checkpoint directory or file (auto-discovers latest if omitted)")
+    p_play.add_argument("--stockfish-path", type=str, default=None, help="Path to Stockfish binary")
+    p_play.add_argument("--device", type=str, default="auto", help="Compute device ('cuda', 'cpu', 'auto')")
+
     return parser
 
 
@@ -649,6 +655,14 @@ def main() -> None:
         run_selfplay(args)
     elif args.command == "evaluate":
         run_evaluate(args)
+    elif args.command == "play":
+        from chess_ai.gui import ChessGUI
+        gui = ChessGUI(
+            checkpoint_path=args.checkpoint,
+            stockfish_path=args.stockfish_path,
+            device_name=args.device,
+        )
+        gui.run()
 
 
 if __name__ == "__main__":
