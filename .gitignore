@@ -5,6 +5,15 @@ build/
 dist/
 wheels/
 *.egg-info
+.pytest_cache/
 
 # Virtual environments
-.venv
+.venv/
+
+# Experiment outputs and checkpoints
+runs/*
+!runs/.gitkeep
+
+# Generated matches
+data/matches/
+*.pgn.gz

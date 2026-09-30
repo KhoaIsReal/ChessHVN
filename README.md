@@ -270,6 +270,16 @@ uv run python -m chess_ai.main selfplay \
 uv run python -m chess_ai.main evaluate \
     --num-games 10 \
     --search-depth 2
+
+# 6. Đấu hàng loạt 100,000 ván Self-Play & 100,000 ván Stockfish (Đa tiến trình song song)
+# Đấu 100k ván Self-Play (Lưu vào data/matches/selfplay_100k.pgn):
+uv run python scripts/mass_match.py --mode selfplay --games 100000
+
+# Đấu 100k ván Stockfish (Lưu vào data/matches/stockfish_100k.pgn):
+uv run python scripts/mass_match.py --mode stockfish --games 100000
+
+# Đấu cả hai (100k Self-Play + 100k Stockfish = 200,000 ván):
+uv run python scripts/mass_match.py --mode all --games 100000
 ```
 
 ---
