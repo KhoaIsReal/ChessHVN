@@ -1,0 +1,24 @@
+[project]
+name = "chess_ai"
+version = "0.1.0"
+description = "Research prototype for Huge Layer Chess Engine with TD Learning, Alpha-Beta, Dynamic Growth, Sparse Residuals, and Neuron Masking"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-chess>=1.999",
+    "numpy>=1.26.0",
+    "pytest>=8.0.0",
+    "torch>=2.1.0",
+    "safetensors>=0.8.0",
+]
+
+[project.scripts]
+chess-ai = "chess_ai.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.18,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,29 @@
+[Event "Sample Game 1"]
+[Site "Belgrade"]
+[Date "1992.11.04"]
+[Round "1"]
+[White "Player A"]
+[Black "Player B"]
+[Result "1-0"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. d4 Bg4 10. d5 1-0
+
+[Event "Sample Game 2"]
+[Site "Moscow"]
+[Date "1985.10.15"]
+[Round "2"]
+[White "Player C"]
+[Black "Player D"]
+[Result "0-1"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Bd3 d5 6. Nf3 c5 7. O-O cxd4 8. exd4 dxc4 9. Bxc4 b6 0-1
+
+[Event "Sample Game 3"]
+[Site "London"]
+[Date "2000.10.20"]
+[Round "3"]
+[White "Player E"]
+[Black "Player F"]
+[Result "1/2-1/2"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nb3 Be6 8. Qd2 Nbd7 1/2-1/2

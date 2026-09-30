@@ -1,0 +1,4 @@
+step,episode,loss,mean_td_error,mean_abs_td_error,win_rate,draw_rate,loss_rate,total_params,hidden_dims,active_neuron_ratio,sparse_density,nodes_per_sec,gpu_memory
+1,1,0.096927,0.110212,0.305193,1.0,0.0,0.0,377601,"[256, 256]",1.0,0.0,90.73,N/A (CPU)
+2,2,0.069808,0.027014,0.275507,0.5,0.5,0.0,377601,"[256, 256]",1.0,0.0,82.58,N/A (CPU)
+3,3,0.055095,0.002051,0.217435,0.3333,0.6667,0.0,377601,"[256, 256]",1.0,0.0,54.85,N/A (CPU)

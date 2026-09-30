@@ -1,0 +1,82 @@
+{
+  "step": 3,
+  "episode": 3,
+  "parameter_stats": {
+    "total_params": 377601,
+    "trainable_params": 377601,
+    "fp32_bytes": 1510404,
+    "fp16_bytes": 755202,
+    "bf16_bytes": 755202,
+    "int16_bytes": 755202,
+    "fp32_str": "1.44 MB",
+    "fp16_str": "0.72 MB",
+    "bf16_str": "0.72 MB",
+    "int16_str": "0.72 MB"
+  },
+  "growth_history": [],
+  "config": {
+    "name": "run_20260929_214613",
+    "device": "auto",
+    "seed": 42,
+    "episodes": 3,
+    "batch_size": 32,
+    "replay_buffer_size": 10000,
+    "checkpoint_interval": 5,
+    "log_interval": 1,
+    "output_dir": "runs",
+    "model": {
+      "hidden_dims": [
+        256,
+        256
+      ],
+      "sparse_residual_enabled": false,
+      "sparse_residual_density": 0.01,
+      "genius_neuron_dropout_enabled": false,
+      "genius_neuron_dropout_rate": 0.05,
+      "activation": "relu",
+      "use_layer_norm": false
+    },
+    "td": {
+      "td_method": "td0",
+      "gamma": 1.0,
+      "lambda_": 0.8,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "gradient_clip": 1.0
+    },
+    "search": {
+      "depth": 1,
+      "evaluation_mode": "neural",
+      "move_ordering": true
+    },
+    "growth": {
+      "growth_mode": "plateau",
+      "patience": 10,
+      "threshold": 0.001,
+      "growth_increment": 2048,
+      "max_hidden_dim": 32768
+    },
+    "selfplay": {
+      "max_moves_per_game": 200,
+      "temperature": 0.0,
+      "exploration_moves": 4
+    },
+    "sources": {
+      "enabled_sources": [
+        "selfplay",
+        "pgn",
+        "fen"
+      ],
+      "source_weights": {
+        "selfplay": 0.5,
+        "pgn": 0.3,
+        "fen": 0.2
+      },
+      "pgn_path": "data/sample_grandmaster.pgn",
+      "fen_path": "data/sample_positions.fen",
+      "num_selfplay_workers": 1,
+      "buffer_capacity_per_source": 20000
+    }
+  },
+  "seed": 42
+}
